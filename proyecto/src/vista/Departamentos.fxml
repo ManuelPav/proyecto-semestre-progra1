@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="685.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.DepartamentosController">
+   <children>
+      <Pane prefHeight="93.0" prefWidth="685.0" style="-fx-background-color: #555;">
+         <children>
+            <Label layoutX="38.0" layoutY="4.0" text="Departamentos" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Regular" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox layoutX="359.0" layoutY="119.0" prefHeight="358.0" prefWidth="313.0">
+         <children>
+            <TableView fx:id="tb" prefHeight="337.0" prefWidth="313.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="Departamentos" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </HBox>
+      <Label layoutX="38.0" layoutY="120.0" text="Nombre">
+         <font>
+            <Font name="Dubai Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="177.0" text="Descripción">
+         <font>
+            <Font name="Dubai Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="289.0" text="Integrantes ">
+         <font>
+            <Font name="Dubai Medium" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" layoutX="38.0" layoutY="139.0" prefHeight="30.0" prefWidth="300.0" />
+      <TextArea fx:id="txaDescripcion" layoutX="38.0" layoutY="196.0" prefHeight="85.0" prefWidth="300.0" />
+      <ListView fx:id="listIntegrantes" layoutX="38.0" layoutY="310.0" prefHeight="116.0" prefWidth="300.0" />
+      <Button layoutX="151.0" layoutY="519.0" mnemonicParsing="false" onAction="#agregarDepartamento" prefHeight="37.0" prefWidth="120.0" style="-fx-border-width: 1px; -fx-border-color: #55ee77; -fx-background-color: #00ff55; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Agregar">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="415.0" layoutY="519.0" mnemonicParsing="false" onAction="#verEliminar" prefHeight="37.0" prefWidth="120.0" style="-fx-border-width: 1px; -fx-background-color: #ee4422; -fx-background-radius: 10px;" text="Eliminar">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="283.0" layoutY="519.0" mnemonicParsing="false" onAction="#verGuardar" prefHeight="37.0" prefWidth="120.0" style="-fx-border-width: 1px; -fx-border-color: #eeee00; -fx-background-color: #ff0; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Guardar">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="77.0" layoutY="434.0" mnemonicParsing="false" onAction="#verIntegrante" prefHeight="30.0" prefWidth="100.0" style="-fx-border-width: 1px; -fx-border-color: #55ee77; -fx-background-color: #00ff55; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Agregar">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="199.0" layoutY="435.0" mnemonicParsing="false" onAction="#verIntegranteAgregado" prefHeight="30.0" prefWidth="100.0" style="-fx-border-width: 1px; -fx-background-color: #ee4422; -fx-background-radius: 10px;" text="Eliminar">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

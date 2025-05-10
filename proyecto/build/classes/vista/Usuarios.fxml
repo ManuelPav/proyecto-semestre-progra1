@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="685.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.UsuarioController">
+   <children>
+      <Pane prefHeight="93.0" prefWidth="685.0" style="-fx-background-color: #555;">
+         <children>
+            <Label layoutX="24.0" layoutY="4.0" text="Usuario" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Regular" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="89.0" prefHeight="512.0" prefWidth="685.0">
+         <children>
+            <Label layoutX="38.0" layoutY="45.0" text="codigo">
+               <font>
+                  <Font name="Dubai Medium" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnEliminarUsuario" layoutX="470.0" layoutY="422.0" mnemonicParsing="false" onAction="#confimarEliminacion" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #ee4422; -fx-background-radius: 10px;" text="Eliminar">
+               <font>
+                  <Font name="Dubai Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAgregarUsuario" layoutX="166.0" layoutY="421.0" mnemonicParsing="false" onAction="#confirmarAgregar" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #00ff55; -fx-border-width: 1px; -fx-border-color: #55ee77; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Agregar">
+               <font>
+                  <Font name="Dubai Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="38.0" layoutY="105.0" text="Nombre">
+               <font>
+                  <Font name="Dubai Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="162.0" text="Apellido">
+               <font>
+                  <Font name="Dubai Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="218.0" text="Identificación">
+               <font>
+                  <Font name="Dubai Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="230.0" layoutY="218.0" text="No. Identificación">
+               <font>
+                  <Font name="Dubai Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="271.0" text="Correo electrónico">
+               <font>
+                  <Font name="Dubai Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="321.0" text="Contraseña">
+               <font>
+                  <Font name="Dubai Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="230.0" layoutY="321.0" text="Rol">
+               <font>
+                  <Font name="Dubai Medium" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNumIdentificacion" layoutX="230.0" layoutY="237.0" prefHeight="30.0" prefWidth="120.0">
+               <font>
+                  <Font name="Dubai Light" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtIdentificacion" layoutX="38.0" layoutY="237.0" prefHeight="30.0" prefWidth="175.0">
+               <font>
+                  <Font name="Dubai Light" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtApellido" layoutX="38.0" layoutY="182.0" prefHeight="30.0" prefWidth="315.0">
+               <font>
+                  <Font name="Dubai Light" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtNombre" layoutX="38.0" layoutY="124.0" prefHeight="30.0" prefWidth="315.0">
+               <font>
+                  <Font name="Dubai Light" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCorreo" layoutX="38.0" layoutY="290.0" prefHeight="30.0" prefWidth="315.0">
+               <font>
+                  <Font name="Dubai Light" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtContrasenia" layoutX="38.0" layoutY="340.0" prefHeight="30.0" prefWidth="175.0">
+               <font>
+                  <Font name="Dubai Light" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtRol" layoutX="230.0" layoutY="340.0" prefHeight="30.0" prefWidth="120.0">
+               <font>
+                  <Font name="Dubai Light" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCodigo" layoutX="38.0" layoutY="64.0" prefHeight="30.0" prefWidth="100.0">
+               <font>
+                  <Font name="Dubai Light" size="13.0" />
+               </font>
+            </TextField>
+            <ScrollPane layoutX="378.0" layoutY="47.0" prefHeight="331.0" prefWidth="282.0" style="-fx-background-color: #fff;">
+               <content>
+                  <TableView fx:id="tabela" prefHeight="329.0" prefWidth="280.0" style="-fx-background-color: #fff;">
+                    <columns>
+                      <TableColumn editable="false" prefWidth="64.0" resizable="false" sortType="DESCENDING" text="Codigo" />
+                      <TableColumn fx:id="nombre" editable="false" prefWidth="117.0" resizable="false" sortType="DESCENDING" text="Nombre" />
+                        <TableColumn fx:id="nombreUsuario" editable="false" prefWidth="98.0" resizable="false" sortType="DESCENDING" text="Usuario" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <Button fx:id="btnGuardar" layoutX="317.0" layoutY="421.0" mnemonicParsing="false" onAction="#confirmarEditar" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #ff0; -fx-border-width: 1px; -fx-border-color: #eeee00; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Guardar">
+               <font>
+                  <Font name="Dubai Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

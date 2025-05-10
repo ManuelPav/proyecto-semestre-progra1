@@ -1,64 +1,65 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
+ */
 package controlador;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Manuel
- */
+
 public class LoginController implements Initializable {
 
-    @FXML
-    private Label hola;
-    @FXML
-    private PasswordField txtContra;
+    InicioController log = new InicioController();
+    Stage loginStage = new Stage();
+    
     @FXML
     private TextField txtUsuario;
     @FXML
-    private Button btnIngresar;
- 
-    private Stage stage;
-    
-    
+    private PasswordField txtContrasenia;
+    @FXML
+    private AnchorPane loginPane;
+
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
     }    
 
+    public void abrirVentana(){
+        try {
+          Parent root = FXMLLoader.load(getClass().getResource("/vista/Login.fxml"));
+          loginStage.setScene(new Scene(root)); 
+          loginStage.show();
+        } catch (IOException ex) {
+            System.out.println("no se pudo hacer esta mrd");
+        }
+    }
+   
     @FXML
-    private void enviar(MouseEvent event) throws IOException {
-     
+    private void ingresar(ActionEvent event) {
+        log.mostrarVentana();
+        loginStage = (Stage) loginPane.getScene().getWindow();
+        loginStage.close();
     }
+    
+   
 
-    @FXML
-    private void showInicio(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Inicio.fxml"));
-        Parent root = loader.load();
-        Scene scene= new Scene(root);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
-        this.stage.close();
-        
-    }
-
-    public void setScene(Stage primaryStage) {
-            stage = primaryStage;
-    }
     
 }

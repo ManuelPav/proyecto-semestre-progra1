@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ConfiguracionController">
+   <children>
+      <GridPane prefHeight="600.0" prefWidth="650.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="650.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="510.0" minHeight="10.0" prefHeight="510.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="630.0" style="-fx-background-radius: 20px; -fx-background-color: fff;">
+                     <children>
+                        <Label layoutX="30.0" layoutY="20.0" text="Configuración">
+                           <font>
+                              <Font name="Verdana" size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane prefHeight="80.0" prefWidth="630.0" style="-fx-background-color: #000;" GridPane.rowIndex="1">
+               <children>
+                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="490.0" prefWidth="630.0" style="-fx-background-radius: 20px; -fx-background-color: fff;">
+                     <children>
+                        <HBox layoutX="15.0" layoutY="14.0" prefHeight="75.0" prefWidth="600.0">
+                           <children>
+                              <Pane prefHeight="75.0" prefWidth="619.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: #000;">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="14.0" text="Nombre de la Empresa">
+                                       <font>
+                                          <Font name="Rockwell" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="txtNombreEmpresa" layoutX="30.0" layoutY="36.0" text="Ticket Management" textFill="#555555">
+                                       <font>
+                                          <Font name="Rockwell" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnNombreEmpresa" layoutX="518.0" layoutY="-2.0" mnemonicParsing="false" onAction="#abrirFormulario" prefHeight="75.0" prefWidth="82.0" style="-fx-background-color: transparent;" />
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="544.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/lapiz.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="15.0" layoutY="89.0" prefHeight="75.0" prefWidth="600.0">
+                           <children>
+                              <Pane prefHeight="75.0" prefWidth="619.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: #000;">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="14.0" text="Logotipo">
+                                       <font>
+                                          <Font name="Rockwell" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="txtLogo" layoutX="30.0" layoutY="36.0" text="C:\users\Profile\documents\images\Logo.png" textFill="#555555">
+                                       <font>
+                                          <Font name="Rockwell" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnLogotipo" layoutX="518.0" layoutY="1.0" mnemonicParsing="false" onAction="#abrirFormulario" prefHeight="75.0" prefWidth="82.0" style="-fx-background-color: transparent;" />
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="544.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/lapiz.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="15.0" layoutY="164.0" prefHeight="75.0" prefWidth="600.0">
+                           <children>
+                              <Pane prefHeight="75.0" prefWidth="619.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: #000;">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="14.0" text="Idioma Predeterminado">
+                                       <font>
+                                          <Font name="Rockwell" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="txtIdioma" layoutX="30.0" layoutY="36.0" text="Español (Latinoamérica)" textFill="#555555">
+                                       <font>
+                                          <Font name="Rockwell" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnIdioma" layoutX="518.0" layoutY="1.0" mnemonicParsing="false" onAction="#abrirFormulario" prefHeight="75.0" prefWidth="82.0" style="-fx-background-color: transparent;" />
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="544.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/lapiz.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="15.0" layoutY="239.0" prefHeight="75.0" prefWidth="600.0">
+                           <children>
+                              <Pane prefHeight="75.0" prefWidth="619.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: #000;">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="14.0" text="Zona Horaria">
+                                       <font>
+                                          <Font name="Rockwell" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="txtZonaHoraria" layoutX="30.0" layoutY="36.0" text="GTQ 6:00" textFill="#555555">
+                                       <font>
+                                          <Font name="Rockwell" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnZonaHoraria" layoutX="518.0" layoutY="1.0" mnemonicParsing="false" onAction="#abrirFormulario" prefHeight="75.0" prefWidth="82.0" style="-fx-background-color: transparent;" />
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="544.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/lapiz.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="15.0" layoutY="314.0" prefHeight="75.0" prefWidth="600.0">
+                           <children>
+                              <Pane prefHeight="75.0" prefWidth="619.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: #000;">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="14.0" text="Tiempo de Vencimiento de Tickets">
+                                       <font>
+                                          <Font name="Rockwell" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="txtTiempoVencimiento" layoutX="30.0" layoutY="36.0" text="3 Días" textFill="#555555">
+                                       <font>
+                                          <Font name="Rockwell" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnTiempoVencimiento" layoutX="518.0" mnemonicParsing="false" onAction="#abrirFormulario" prefHeight="75.0" prefWidth="82.0" style="-fx-background-color: transparent;" />
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="544.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/lapiz.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="15.0" layoutY="389.0" prefHeight="75.0" prefWidth="600.0">
+                           <children>
+                              <Pane prefHeight="75.0" prefWidth="619.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: #000;">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="14.0" text="Niveles de Prioridad de Tickets ">
+                                       <font>
+                                          <Font name="Rockwell" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="txtNivelPrioridad" layoutX="30.0" layoutY="36.0" text="Bajo, Medio, Alto" textFill="#555555">
+                                       <font>
+                                          <Font name="Rockwell" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnNivelDePrioridad" layoutX="518.0" layoutY="-1.0" mnemonicParsing="false" onAction="#abrirFormulario" prefHeight="75.0" prefWidth="82.0" style="-fx-background-color: transparent;" />
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="544.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../imagenes/lapiz.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

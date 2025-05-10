@@ -2,15 +2,10 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Font?>
 
 
 <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label text="Ticket">
-         <font>
-            <Font name="SansSerif Regular" size="36.0" />
-         </font>
-      </Label>
+      <Label text="hola que hace" />
    </children>
 </HBox>

@@ -4,51 +4,55 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" cache="true" cacheHint="SPEED" maxHeight="451.0" maxWidth="550.0" minHeight="375.0" minWidth="550.0" prefHeight="375.0" prefWidth="550.0" style="-fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.LoginController">
+<AnchorPane id="AnchorPane" fx:id="loginPane" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.LoginController">
    <children>
-      <Pane cache="true" cacheHint="QUALITY" prefHeight="450.0" prefWidth="233.0" style="-fx-background-color: #2699e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="317.0" AnchorPane.topAnchor="0.0">
+      <Pane prefHeight="450.0" prefWidth="300.0" style="-fx-background-color: #00beff;">
          <children>
-            <Label layoutX="25.0" layoutY="80.0" prefHeight="58.0" prefWidth="183.0" text="Bienvenido">
+            <Label layoutX="100.0" layoutY="180.0" text="Ticket &#10;">
                <font>
-                  <Font name="Leelawadee UI" size="36.0" />
+                  <Font name="Dubai Regular" size="36.0" />
                </font>
             </Label>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../imagenes/usuario.png" />
-               </image>
-            </ImageView>
+            <Label layoutX="44.0" layoutY="217.0" text="Management">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Pane layoutX="233.0" prefHeight="450.0" prefWidth="317.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane layoutX="300.0" prefHeight="450.0" prefWidth="352.0" style="-fx-background-color: fff;">
          <children>
-            <Label fx:id="hola" layoutX="34.0" layoutY="54.0" text="Iniciar Sesión">
+            <Label layoutX="88.0" layoutY="86.0" text="Bienvenido">
                <font>
-                  <Font name="Leelawadee" size="40.0" />
+                  <Font size="36.0" />
                </font>
             </Label>
-            <Label layoutX="34.0" layoutY="132.0" text="Usuario">
+            <Label layoutX="118.0" layoutY="120.0" text="Iniciar Sesión">
                <font>
-                  <Font name="Leelawadee" size="18.0" />
+                  <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="34.0" layoutY="195.0" text="Contraseña">
+            <Label layoutX="51.0" layoutY="182.0" text="Nombre">
                <font>
-                  <Font name="Leelawadee" size="18.0" />
+                  <Font size="18.0" />
                </font>
             </Label>
-            <PasswordField fx:id="txtContra" layoutX="34.0" layoutY="218.0" prefHeight="25.0" prefWidth="233.0" />
-            <TextField fx:id="txtUsuario" layoutX="34.0" layoutY="155.0" prefHeight="25.0" prefWidth="233.0" />
-            <Button fx:id="btnIngresar" layoutX="91.0" layoutY="288.0" mnemonicParsing="false" onAction="#showInicio" onMouseClicked="#enviar" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #3cf;" text="Ingresar">
+            <Label layoutX="51.0" layoutY="244.0" text="Contraseña">
                <font>
-                  <Font name="SansSerif Regular" size="14.0" />
-               </font></Button>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsuario" layoutX="51.0" layoutY="206.0" prefHeight="27.0" prefWidth="250.0" style="-fx-background-radius: 5px; -fx-background-color: fff; -fx-border-width: 0 0 1 0; -fx-border-color: #000;" />
+            <PasswordField fx:id="txtContrasenia" layoutX="51.0" layoutY="271.0" prefHeight="27.0" prefWidth="250.0" style="-fx-background-radius: 5px; -fx-background-color: fff; -fx-border-width: 0 0 1 0; -fx-border-color: #000;" />
+            <Button layoutX="101.0" layoutY="334.0" mnemonicParsing="false" onAction="#ingresar" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: fff; -fx-border-image-width: 0.5; -fx-border-color: aaa; -fx-border-radius: 10px;" text="Ingresar">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>

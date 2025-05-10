@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="169.0" prefWidth="375.0" style="-fx-background-color: #000;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controlador.VerificacionGuardarController">
+   <children>
+      <Pane layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="355.0" style="-fx-background-color: #fff; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="39.0" layoutY="6.0" text="¿Desea guardar los cambios &#10;realizados?" textAlignment="CENTER">
+               <font>
+                  <Font name="Dubai Regular" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="61.0" layoutY="99.0" mnemonicParsing="false" onAction="#cancelar" prefWidth="100.0" style="-fx-background-radius: 20; -fx-background-color: #FF0000;" text="Cancelar" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Light" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="194.0" layoutY="99.0" mnemonicParsing="false" onAction="#aceptar" prefWidth="100.0" style="-fx-background-radius: 20; -fx-background-color: #3BDD4E;" text="Aceptar" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Light" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
