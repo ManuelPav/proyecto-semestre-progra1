@@ -9,6 +9,8 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -16,7 +18,12 @@ import javafx.fxml.Initializable;
  * @author manue
  */
 public class VerificacionGuardarController implements Initializable {
-
+    
+    public boolean veri;
+    Stage stage;
+    @FXML
+    private AnchorPane ap;
+    
     /**
      * Initializes the controller class.
      */
@@ -27,10 +34,13 @@ public class VerificacionGuardarController implements Initializable {
 
     @FXML
     private void cancelar(ActionEvent event) {
+      stage = (Stage) ap.getScene().getWindow();
+      stage.close();
     }
 
     @FXML
     private void aceptar(ActionEvent event) {
-    }
-    
+      stage = (Stage) ap.getScene().getWindow();
+      stage.close();
+    }    
 }

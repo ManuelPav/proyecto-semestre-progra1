@@ -1,7 +1,7 @@
 
 package logica;
 
-public class Tecnico extends Persona{
+public class Tecnico extends Usuario{
     private Departamento departamento;
 
     public Tecnico() {

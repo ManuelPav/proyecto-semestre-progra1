@@ -1,23 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package controlador;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 import logica.Rol;
-import logica.Usuario;
+import logica.Visitante;
 
 /**
  * FXML Controller class
@@ -25,10 +27,6 @@ import logica.Usuario;
  * @author manue
  */
 public class UsuarioController implements Initializable {
-    
-    Rol admin = new Rol("Administrador", "administra cosas");
-    Rol tec = new Rol("Tecnico", "Mas bajo que un admin");
-    Rol usu = new Rol("Usuario", "Lo normal");
 
     @FXML
     private Button btnEliminarUsuario;
@@ -51,31 +49,16 @@ public class UsuarioController implements Initializable {
     @FXML
     private TextField txtCodigo;
     @FXML
-    private Button btnGuardar;
+    private TableView<Visitante> tabela;
     @FXML
-    private TableView<Usuario> tabela;
+    private TableColumn<Visitante, String> nombre;
     @FXML
-    private TableColumn<Usuario, String> nombre;
-    @FXML
-    private TableColumn<Usuario, String> nombreUsuario;
+    private TableColumn<Visitante, String> nombreUsuario;
 
-    ObservableList<Usuario> inicialData(){
-        Usuario u1 = new Usuario("Manuel", "ManuelPav", "manuelmansilla987@gmail.com", "Benja12", admin);
-        Usuario u2 = new Usuario("Benjamin", "ManuelPav", "manuelmansilla987@gmail.com", "Benja12", tec);
-        Usuario u3 = new Usuario("Mansilla", "ManuelPav", "manuelmansilla987@gmail.com", "Benja12", usu);
-        Usuario u4 = new Usuario("Estada", "ManuelPav", "manuelmansilla987@gmail.com", "Benja12", tec);
-        Usuario u5 = new Usuario("Aura", "ManuelPav", "manuelmansilla987@gmail.com", "Benja12", usu);
-        return FXCollections.<Usuario> observableArrayList(u1,u2,u3,u4,u5);
-    };
-    
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        nombre.setCellValueFactory(new PropertyValueFactory<Usuario, String>("nombre"));
-        nombreUsuario.setCellValueFactory(new PropertyValueFactory<Usuario, String>("nombreUsuario"));
-        
-        tabela.setItems(inicialData());
-    }    
+
+    }
 
     @FXML
     private void confimarEliminacion(ActionEvent event) {
@@ -83,10 +66,22 @@ public class UsuarioController implements Initializable {
 
     @FXML
     private void confirmarAgregar(ActionEvent event) {
+
+        Stage s = new Stage();
+
+        try {
+
+            Parent root = FXMLLoader.load(getClass().getResource("/vista/VerificacionGuardar.fxml"));
+
+            s.setScene(new Scene(root));
+            s.show();
+
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "no se pudo realizar la accion");
+        } catch (RuntimeException ex) {
+            JOptionPane.showMessageDialog(null, "No se pudo realizar la accion");
+        }
+
     }
 
-    @FXML
-    private void confirmarEditar(ActionEvent event) {
-    }
-    
 }

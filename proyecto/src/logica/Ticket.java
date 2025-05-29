@@ -1,23 +1,35 @@
 
 package logica;
 
+import java.net.URL;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Ticket extends Entidad {
     private  Departamento departamentoAsignado;
     private String nivelDePrioridad;
-    private String adjunto;
-    private LocalDateTime fechaDeCreacion;
+    private URL adjunto;
+    private Date fechaDeCreacion;
+    private String nota;
 
     public Ticket() {
     }
 
-    public Ticket(Departamento departamentoAsignado, String nivelDePrioridad, String adjunto, LocalDateTime fechaDeCreacion, String nombre, String descripcion) {
+    public Ticket(Departamento departamentoAsignado, String nivelDePrioridad, URL adjunto, Date fechaDeCreacion, String nombre, String descripcion, String nota) {
         super(nombre, descripcion);
         this.departamentoAsignado = departamentoAsignado;
         this.nivelDePrioridad = nivelDePrioridad;
         this.adjunto = adjunto;
         this.fechaDeCreacion = fechaDeCreacion;
+        this.nota = nota;
+    }
+
+    public String getNota() {
+        return nota;
+    }
+
+    public void setNota(String nota) {
+        this.nota = nota;
     }
 
     public Departamento getDepartamentoAsignado() {
@@ -36,19 +48,19 @@ public class Ticket extends Entidad {
         this.nivelDePrioridad = nivelDePrioridad;
     }
 
-    public String getAdjunto() {
+    public URL getAdjunto() {
         return adjunto;
     }
 
-    public void setAdjunto(String adjunto) {
+    public void setAdjunto(URL adjunto) {
         this.adjunto = adjunto;
     }
 
-    public LocalDateTime getFechaDeCreacion() {
+    public Date getFechaDeCreacion() {
         return fechaDeCreacion;
     }
 
-    public void setFechaDeCreacion(LocalDateTime fechaDeCreacion) {
+    public void setFechaDeCreacion(Date fechaDeCreacion) {
         this.fechaDeCreacion = fechaDeCreacion;
     }
     

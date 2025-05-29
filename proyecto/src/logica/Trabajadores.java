@@ -1,7 +1,7 @@
 
 package logica;
 
-public abstract class Trabajadores extends Persona{
+public abstract class Trabajadores extends Usuario{
 
     public Trabajadores() {
     }
